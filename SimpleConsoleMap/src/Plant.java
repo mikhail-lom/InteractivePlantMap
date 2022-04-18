@@ -1,32 +1,28 @@
+import java.util.HashMap;
 import java.util.Hashtable;
 
 public class Plant {
     //fields
     String name;
-    Hashtable<Plant, Integer> plantCompatibility;
+    HashMap<String,CompatibilityValues> currentPlantCompatibility = new HashMap<String,CompatibilityValues>();
+
 
     //constructors
     Plant(String plantName) {
         name = plantName;
-        plantCompatibility = new Hashtable<>();
+        currentPlantCompatibility.put(plantName,CompatibilityValues.BAD);
     }
 
     //methods
-    void createPlant(String newPlantName) {
-        new Plant(newPlantName);
-    }
 
-    void retrievePlant() {
-
-    }
-
-    void updatePlant() {
-        if (!plantCompatibility.containsKey(name)) {
-
+    //Check values in compatibility table
+    public void setPlantCompatibility(String comparablePlantName, CompatibilityValues val) {
+        if (currentPlantCompatibility.containsKey(comparablePlantName)) {
+            System.out.println("Plant is already in the table!");
+        }else{
+            currentPlantCompatibility.put(comparablePlantName,val);
         }
-    }
 
-    void deletePlant() {
 
     }
 }

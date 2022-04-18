@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Area implements PlantCompatibility{
+public class Area implements IPlantCompatibility {
     //fields
     List<Cell> cells;
 
@@ -10,10 +10,6 @@ public class Area implements PlantCompatibility{
     }
 
     //methods
-    @Override
-    public boolean isCompatible(Plant currentPlant, Plant comparablePlant) {
-        return false;
-    }
 
     void addNewCell(Cell newCell){
 
