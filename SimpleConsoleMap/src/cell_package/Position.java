@@ -1,3 +1,5 @@
+package cell_package;
+
 public class Position {
     Integer axisX;
     Integer axisY;

@@ -1,3 +1,6 @@
+import cell_package.CompatibilityValues;
+import cell_package.Plant;
+
 import java.util.List;
 
 public interface IPlantCompatibility {

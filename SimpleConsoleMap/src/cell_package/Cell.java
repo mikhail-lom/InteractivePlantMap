@@ -1,11 +1,15 @@
+package cell_package;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
 /**
  * cell
  */
-public class Cell implements IPlantCompatibility {
+public class Cell {
     //fields
     Plant plant;
     Position position;
@@ -33,22 +37,22 @@ public class Cell implements IPlantCompatibility {
 
     //Check the compatibility of previous and current plants at this cell
 //    @Override
-//    public CompatibilityValues isCompatible(Plant comparablePlant) {
-//        CompatibilityValues cellCompatibility = CompatibilityValues.BAD;
+//    public cell_package.CompatibilityValues isCompatible(cell_package.Plant comparablePlant) {
+//        cell_package.CompatibilityValues cellCompatibility = cell_package.CompatibilityValues.BAD;
 //        try {
 //            switch (comparablePlant.currentPlantCompatibility.isCompatible(plant)) {
 //                case GOOD -> {
-//                    return cellCompatibility = CompatibilityValues.GOOD;
+//                    return cellCompatibility = cell_package.CompatibilityValues.GOOD;
 //                }
 //                case MIDDLE -> {
-//                    return cellCompatibility = CompatibilityValues.MIDDLE;
+//                    return cellCompatibility = cell_package.CompatibilityValues.MIDDLE;
 //                }
 //                case BAD -> {
-//                    return cellCompatibility = CompatibilityValues.BAD;
+//                    return cellCompatibility = cell_package.CompatibilityValues.BAD;
 //                }
 //            }
 //        } catch (Exception e) {
-//            System.out.println("Something went wrong with Cell isCompatible. Check the table of Compatibility");
+//            System.out.println("Something went wrong with cell_package.Cell isCompatible. Check the table of Compatibility");
 //            ;
 //        }
 //        return cellCompatibility;
@@ -62,7 +66,7 @@ public class Cell implements IPlantCompatibility {
 //    void retrieveCell() { //see the solution at https://javarevisited.blogspot.com/2013/02/how-to-get-key-from-value-in-hashtable.html#axzz7QnGf3Flp
 //        //generating good compatibility list
 //        String key = null;
-//        CompatibilityValues value = CompatibilityValues.GOOD;
+//        cell_package.CompatibilityValues value = cell_package.CompatibilityValues.GOOD;
 //        for (Map.Entry item:
 //             plant.currentPlantCompatibility.entrySet()) {
 //            if (value.equals(item.getValue())){
@@ -73,7 +77,7 @@ public class Cell implements IPlantCompatibility {
 //        }
 //        //generating acceptable compatibility list
 //        String acceptableListKey = null;
-//        CompatibilityValues acceptableListValue = CompatibilityValues.MIDDLE;
+//        cell_package.CompatibilityValues acceptableListValue = cell_package.CompatibilityValues.MIDDLE;
 //        for (Map.Entry item:
 //                plant.currentPlantCompatibility.entrySet()) {
 //            if (value.equals(item.getValue())){

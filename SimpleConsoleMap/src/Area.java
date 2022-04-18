@@ -1,3 +1,5 @@
+import cell_package.Cell;
+
 import java.util.List;
 
 public class Area implements IPlantCompatibility {
