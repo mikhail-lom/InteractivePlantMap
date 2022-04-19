@@ -47,8 +47,9 @@ public class Plant {
         List<Plant> compatibleListIterable = new ArrayList<>();
         Iterator<Map.Entry<Plant, CompatibilityValues>> iter = currentPlantCompatibility.entrySet().iterator();
         do {
-            if (iter.next().getValue() == vl) {
-                compatibleListIterable.add(iter.next().getKey());
+            var item = iter.next();
+            if (item.getValue() == vl) {
+                compatibleListIterable.add(item.getKey());
             }
         }while(iter.hasNext());
         return compatibleListIterable;
