@@ -28,18 +28,19 @@ public class Application {
 //        System.out.println(potato.currentPlantCompatibility.values());
 //        System.out.println(potato.currentPlantCompatibility.keySet());
 
-        for (Plant item: potato.getCompatibleList(CompatibilityValues.GOOD)) {
-            System.out.print(item.name + " ");
-        }
-        System.out.println();
-        for (Plant item: potato.getCompatibleList(CompatibilityValues.MIDDLE)) {
-            System.out.println(item.name);
-        }
-
-
-//        for (String s : testCell.mostCompatiblePlantsList) {
-//            System.out.println(s);
+//        for (Plant item: potato.getCompatibleList(CompatibilityValues.GOOD)) {
+//            System.out.print(item.name + " ");
 //        }
+//        System.out.println();
+//        for (Plant item: potato.getCompatibleList(CompatibilityValues.MIDDLE)) {
+//            System.out.println(item.name);
+//        }
+
+        for (Plant item: potato.getCompatibleListTrghIterator(CompatibilityValues.GOOD)) {
+            System.out.println(item.name);;
+        }
+
+        System.out.println(potato.getCompatibleListTrghIterator(CompatibilityValues.GOOD));
 
 
     }

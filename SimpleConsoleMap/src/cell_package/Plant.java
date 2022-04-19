@@ -1,7 +1,6 @@
 package cell_package;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Plant {
     //fields
@@ -33,28 +32,25 @@ public class Plant {
 
     public List<Plant> getCompatibleList(CompatibilityValues val) {
         List<Plant> compatibleList = new ArrayList<>();
-//        Iterator<Plant> iterator = currentPlantCompatibility.entrySet();
-//        do {
-//            if (currentPlantCompatibility.containsKey(iterator) && currentPlantCompatibility.containsValue(val)) {
-//
-//            }
-//        } while (iterator.hasNext());
-
         //get values and keys as pairs
         //see https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html
-        for (Map.Entry<Plant,CompatibilityValues> item:
-             currentPlantCompatibility.entrySet()) {
+        for (Map.Entry<Plant, CompatibilityValues> item :
+                currentPlantCompatibility.entrySet()) {
             if (item.getValue() == val) {
                 compatibleList.add(item.getKey());
             }
         }
-
-//        Map<CompatibilityValues, List<Plant>> reverseMap = currentPlantCompatibility.entrySet()
-//                        .stream()
-//                .collect(Collectors.groupingBy(Map.Entry::getValue,
-//                        Collectors.mapping(
-//                                Map.Entry::getKey,
-//                                Collectors.toList())));
         return compatibleList;
+    }
+
+    public List<Plant> getCompatibleListTrghIterator(CompatibilityValues vl) {
+        List<Plant> compatibleListIterable = new ArrayList<>();
+        Iterator<Map.Entry<Plant, CompatibilityValues>> iter = currentPlantCompatibility.entrySet().iterator();
+        do {
+            if (iter.next().getValue() == vl) {
+                compatibleListIterable.add(iter.next().getKey());
+            }
+        }while(iter.hasNext());
+        return compatibleListIterable;
     }
 }
